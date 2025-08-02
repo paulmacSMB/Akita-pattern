@@ -8,7 +8,7 @@ export class CarService {
     constructor(private carStore: CarStore, private http: HttpClient){}
 
     getCars() {
-        return this.http.get<Car[]>("https://localhost:5266/api/cars").subscribe(cars => {
+        return this.http.get<Car[]>("https://localhost:7271/api/cars").subscribe(cars => {
             this.carStore.set(cars);
         });
     }
